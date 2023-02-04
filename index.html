@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Instruction Website</title>
+
+	
+	
+<!-----normalizing webpage global settings removes formatting on all html and boxes...put this on all webpages to give a clean slate to start from, so you can control everything------->
+<!----- * indicates a global-universal setting ------>
+<!-----styles settings that occur outside the * (global setings apple to that box(div only) see #Box1 as an example------->
+<!-----line-height sets the height of the 1st line within the height of the box...change the line height to move text up and down wthin the box..a line height the same height as box will center it... see #logo as an example------->
+	
+	
+<style type="text/css">
+*
+	{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	}
+	
+
+	#pagewrapper{
+		width: 90%;
+		margin:auto;
+	}	
+	
+	
+	#logo
+	{
+		width: 100%;
+		min-height: 50px;
+		line-height: 50px;
+		background-color:lightslategray;
+		padding-left: 2%;
+		padding-right: 2%;
+		text-align: center;
+		border-left: 20px solid black;
+		border-right: 20px solid black;
+		margin-bottom: 20px;
+
+	}
+	
+	#image1{
+		width: 80%;
+		margin:auto;
+		padding-top:10px;
+		text-align:center;
+	}	
+	
+	#image2{
+		width: 100%;
+		height:60%;
+		padding-top:50%;
+		margin:auto;
+		margin-bottom:0;
+		vertical-align: center;
+		text-align:left;
+	}	
+	
+	#nav
+	{
+		width: 100%;
+		min-height: 30px;
+		padding-left: 2%;
+		padding-right: 2%;
+		text-align: right;
+	}
+	
+	
+	.navlist li{
+		display: inline;
+	}
+	
+	.navlist li a{
+		text-decoration: none;
+		color: black;
+		margin: 10px;
+	}
+	
+	
+#Header
+	{
+		width: 100%;
+		min-height: 100px;
+		line-height: 100px;
+		background-color:lightslategray;
+		padding-left: 2%;
+		padding-right: 2%;
+		text-align: center;
+		border-left: 20px solid black;
+		border-right: 20px solid black;
+		margin-bottom: 20px;
+	}
+	
+	/*..divs are clock level tags. Block level tags always get displayed one below another we must alter the css style to make them appear next to eachother...*/
+	/*..remember all withds for sidebar and body need to equal 100%...*/
+		/*..if we remove the height of the parent box teh background color will disappear as it has nothing in it and the box height will default to the height of the child boxes...to keep the box height we need to use the clearfix class div..to give us atranspartent box..we then can remove the height and the box color*/
+
+	
+	#box1parent
+	{
+		width: 100%;
+		min-height:400px;
+		margin-bottom: 20px;
+	}
+	
+#box1sidebar{
+		width: 20%;
+
+		min-height: 400px;
+		background-color:lightslategray;
+		float: left;
+		border-left: 20px solid black;
+		border-right: 20px solid black;
+		text-align: center;
+
+	}
+	
+#box1body
+	{
+		width: 75%;
+		min-height: 400px;
+		background-color:lightslategray;
+		float: right;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-top: 132px;
+		text-align: center;
+		border-left: 20px solid black;
+		border-right: 20px solid black;
+
+	}
+	
+		.clearfix::after
+	{
+	content: "";
+	display: block;
+	clear: both;
+	}
+	
+	
+#footer
+	{
+		width: 100%;
+		min-height:200px;
+		background-color:slategrey;
+		text-align: center;
+		line-height: 50px;
+		border-left: 20px solid black;
+		border-right: 20px solid black;
+		margin-top: 50px;
+	}
+	
+	#nav2
+	{
+		width: 100%;
+		min-height: 30px;
+		padding-left: 2%;
+		padding-right: 2%;
+		text-align: center;
+
+	}
+	
+	
+	.navlist li{
+		display: inline;
+	
+	}
+	
+	.navlist li a{
+		text-decoration: none;
+		color: black;
+		margin: 10px;
+	
+	}
+	
+	.socials{
+	width:30%;
+	margin:auto;
+	text-allign:center;
+	display:flex;
+	justify-content:space-between;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+	
+/*..clearfix sets the paramaters for an empty paretn box...*/
+/*..::after is a pseudoelement that tells us what to do with the remainder of space in the parent box after the content ends. in this case we want a space after the content, it to return to block(not float) display, and to clear the float settings for both of the child divs)...*/
+
+	
+</style>
+	
+</head>
+
+<body>
+<div id= "pagewrapper">
+	
+	<div id= "logo">
+	<img id="image1" src="Banner Logo.png" alt="rage1">
+	</div>
+	
+	<div id= "nav">
+			<ul class="navlist">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+	</div>
+	
+	
+	<div id= "Header">
+	<h1>Welcome to my site</h1>
+	</div>
+	
+<!-----divs(boxes) to be placed side by side require 1 parent box and 2 or more smaller boxes to be placed side by side within that parent box ------>	
+	<!-----parent box uses the clearfix class property and children boxes use the float property ------>
+		<!-----divs are clock level tags. Block level tags always get displayed one below another ------>
+	
+<!-----content in a parent box will appear fully stretched across the page. if you want content to appear with a border in the center of page simply add another div (box) containing the entire partent and child content.. ------>
+	
+
+		
+	<div id= "box1parent" class= "clearfix">
+	
+		<div id= "box1sidebar">
+		<img id="image2" src="about2-dk yellow.png" alt="rage1">
+		</div>
+	
+		<div id= "box1body">
+   			<p> After working over ten years as an administrator in sales and customer service I am leveraging my professional experience in building client relationships into my passion of aiding clents in their creative and marketing efforts in order to build successful brands.
+          </p><br>
+          <p>
+          My Interest in the Creative Arts and Graphic Design stems from my extensive background in the entertainment industry. One of my proudest accomplishments was working alongside the marketing and publicity team to promote Oscar winning Director John Hancock’s motion picture “Swan Song” During this time I coordinated with outside agency Smith Donovan in the creation and execution of grass roots and social media marketing efforts.</p> <br>
+	
+			
+		</div>
+	</div>
+	
+		<div id= "footer">
+		<div id= "nav2">
+			<ul class="navlist">
+				<li><a href="LANDING PAGE FINAL.html">Home</a></li>
+				<li><a href="NEWS PAGE FINAL------1.html">Services</a></li>
+				<li><a href="VIDEO PAGE----FINAL----A.html">Contact</a></li>
+			</ul>
+	</div>
+			
+		<div class="socials">
+			<div class="icon">
+				<img src="../../WEEK 3/Instruciton Website/icons/red-facebook.png" alt="" width="80">
+			</div>
+		<div class="icon">
+				<img src="../../WEEK 3/Instruciton Website/icons/red-instagram.png" alt="" width="80">
+			</div>
+			<div class="icon">
+				<img src="../../WEEK 3/Instruciton Website/icons/red-twitter.png" alt="" width="80">
+			</div>
+		
+		</div>
+		
+		</div>
+		
+	
+</div>	
+</body>
+</html>
